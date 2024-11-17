@@ -1,0 +1,25 @@
+Added Question Details Feature
+
+A new feature was added to provide additional explanations and details for quiz questions. This helps kids better understand the answers and learn more about the topics.
+
+Changes made:
+1. Backend:
+- Added endpoint /questions/{question_id}/details for getting both text and audio details in a single request
+- Enhanced QuestionGenerator to generate detailed explanations using Wikipedia references
+- Modified SpeechGenerator to provide audio data directly in base64 format
+- Explanations are age-appropriate and provided in German
+
+2. Frontend:
+- Added "Get Details" button next to Submit Answer
+- Details are displayed in a blue info box below the question
+- If voice mode is enabled, details are read aloud using base64 audio data
+- Added new API methods for fetching combined text and audio details
+- UI updates to handle loading states for details
+- Enhanced AudioPlayer to support both URLs and base64 data
+
+3. Performance Improvements:
+- Combined text and audio generation into a single request to prevent duplicate LLM calls
+- Audio data is sent directly in the response instead of requiring a second request
+- Details are only generated when explicitly requested by clicking the button
+
+The feature leverages the existing Wikipedia references to provide deeper context and explanations for each question, helping children better understand why answers are correct and learn more about the topics they're interested in.

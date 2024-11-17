@@ -1,0 +1,15 @@
+Added Question Details Storage Feature
+
+Enhanced the question details feature to persist explanations in a JSON file:
+
+1. Created question_details.json:
+- Empty JSON object that gets populated as details are requested
+- Stores explanations keyed by question_id
+
+2. Modified QuestionGenerator:
+- Added methods to load and save details from/to question_details.json
+- get_question_details now checks for existing details before generating new ones
+- New details are automatically saved when generated
+- Details are cached to prevent redundant LLM calls
+
+This change ensures that once a detail is generated for a question, it remains consistent and can be quickly retrieved without needing to regenerate it through the LLM.

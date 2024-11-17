@@ -1,0 +1,2 @@
+1. move backend to sveltekit backend for easy deployment on vercel (open)
+2. allow user to ask follow up questions for an answer to better understand it. those can be answered with another LLM call via the wikipedia url that is stored with the question. (open)
