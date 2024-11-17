@@ -1,2 +1,5 @@
-1. move backend to sveltekit backend for easy deployment on vercel (open)
-2. allow user to ask follow up questions for an answer to better understand it. those can be answered with another LLM call via the wikipedia url that is stored with the question. (open)
+- finish move to sveltekit
+- make it refactor to more easily add certain things like categories. 
+- this includes having types defined clearly and only once, no duplicates if not needed
+- store last X times a question as asked to avoid repetition
+- add a way to save the questions to a database
